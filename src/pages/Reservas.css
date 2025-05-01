@@ -1,0 +1,78 @@
+.reserva-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #fff0f6;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #d81b60;
+}
+
+.campo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.campo select,
+.input-datepicker {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.btn-reservar {
+  width: 100%;
+  background-color: #d81b60;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+  background-color: #ad1457;
+}
+
+.mensaje {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #444;
+}
+
+.btn-volver {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f48fb1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-volver:hover {
+  background-color: #ec407a;
+}
+
+  

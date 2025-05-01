@@ -1,0 +1,173 @@
+.servicio-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #ffffff, #fceef0);
+  }
+  
+  .servicio-card {
+    background: white;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 1rem;
+    background-image: url('/fondo.jpg.jpeg');
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .servicio-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .servicio-card h2 {
+    margin: 1.5rem 0 0.5rem;
+    color: #d48d9f;
+  }
+  
+  .servicio-card p {
+    padding: 0 1.5rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .reservar-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color: #d48d9f;
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .reservar-btn:hover {
+    background-color: #c06f88;
+    transform: translateY(-2px);
+  }
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  
+  .galeria img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.05);
+  }
+  .galeria-carrusel {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  .galeria-carrusel img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  animation: modalPop 0.3s ease;
+}
+
+.modal h3 {
+  color: #d89fb4;
+  margin-bottom: 1rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.btn-confirmar, .btn-cancelar {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-confirmar {
+  background-color: #d89fb4;
+  color: white;
+}
+
+.btn-cancelar {
+  background-color: #eee;
+  color: #333;
+}
+
+.btn-cancelar:hover {
+  background-color: #ccc;
+}
+
+@keyframes modalPop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+ 
+  @media (max-width: 600px) {
+    .servicio-img {
+      height: 200px;
+    }
+  
+    .servicio-card {
+      margin: 0 1rem;
+    }
+  }
+  

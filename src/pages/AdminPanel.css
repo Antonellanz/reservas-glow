@@ -1,0 +1,101 @@
+.admin-panel {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background-color: #fefefe;
+  }
+  
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .admin-header h2 {
+    margin: 0;
+  }
+  
+  .cerrar-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cerrar-btn:hover {
+    background-color: #c9302c;
+  }
+  
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  .admin-table th {
+    background-color: #f2f2f2;
+  }
+  .eliminar-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .eliminar-btn:hover {
+    background-color: #a71d2a;
+  }
+  
+  .filtro-input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .filtros {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+ 
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #f4f4f4;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+  }  

@@ -1,0 +1,135 @@
+.home-container {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.hero-section {
+  height: 50vh;
+  background-image: url('/fondo.jpg.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero-text {
+  margin-right: auto;
+  text-align: right;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5rem;
+  border-radius: 1rem;
+}
+.glow {
+  color: gold;
+  font-weight: 600;
+}
+.service-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; 
+  justify-items: center; 
+}
+
+.card {
+  width: 100%; 
+  max-width: 300px; 
+  aspect-ratio: 1 / 1; 
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover img {
+  opacity: 0.9;
+}
+
+.card h3 {
+  margin-top: -50px; /* lo sube para que se superponga un poco con la imagen */
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem;
+  color: #d89fb4;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+.info-section {
+  background-color: #f5e3eb;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  color: #d89fb4;
+  margin-bottom: 2rem;
+}
+
+.info-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.info-card {
+  background-color: rgb(245, 220, 235);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 280px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card i {
+  font-size: 2.5rem;
+  color: #d89fb4;
+  margin-bottom: 1rem;
+}
+
+.info-card h4 {
+  color: #d89fb4;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* Responsive: 2 columnas en tablets, 1 en móviles */
+@media (max-width: 900px) {
+  .service-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-section {
+    grid-template-columns: 1fr;
+  }
+}
+  

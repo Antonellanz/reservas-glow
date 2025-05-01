@@ -1,0 +1,109 @@
+.perfil-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #fff0f6;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.perfil-titulo {
+  font-size: 2rem;
+  color: #d81b60;
+  margin-bottom: 0.3rem;
+}
+
+.perfil-bienvenida {
+  font-size: 1.1rem;
+  color: #6a1b9a;
+  margin-bottom: 1.5rem;
+}
+
+.perfil-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-accion {
+  background-color: #f06292;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-accion:hover {
+  background-color: #ec407a;
+}
+
+.btn-accion.cerrar {
+  background-color: #ba68c8;
+}
+
+.btn-accion.cerrar:hover {
+  background-color: #ab47bc;
+}
+
+.perfil-subtitulo {
+  font-size: 1.3rem;
+  color: #7b1fa2;
+  margin-bottom: 1rem;
+}
+
+.perfil-mensaje {
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.perfil-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.perfil-card {
+  background-color: #ffe4ec;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.perfil-card p {
+  margin: 5px 0;
+}
+
+.btn-cancelar {
+  background-color: #e57373;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.btn-cancelar:hover {
+  background-color: #ef5350;
+}
+
+.perfil-vacio {
+  color: #999;
+  font-style: italic;
+  margin-top: 1rem;
+}
