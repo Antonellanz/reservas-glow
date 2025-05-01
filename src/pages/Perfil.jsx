@@ -26,7 +26,7 @@ console.log("TOKEN:", token);
           headers: { Authorization: `Bearer ${token}` }
         });
 
-        console.log("Usuario recibido en frontend:", response.data);
+        console.log("Usuario de front:", response.data);
 
         
         setUsuario(response.data);
