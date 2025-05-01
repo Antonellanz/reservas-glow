@@ -40,7 +40,7 @@ console.log("TOKEN:", token);
         const response = await axios.get(`http://localhost:8080/api/auth/reservas/usuario/${email}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
-        setReservas(response.data);
+        setReservas(response.data.name);
       } catch (error) {
         console.error('Error al obtener reservas', error);
         setMensaje('❌ No se pudieron cargar tus reservas.');
@@ -76,7 +76,7 @@ console.log("TOKEN:", token);
 
   return (
     <div className="perfil-container">
-    <h2 className="perfil-titulo">¡Hola, {usuario?.name}!</h2>
+    <h2 className="perfil-titulo">¡Hola, {usuario}!</h2>
 
       <p className="perfil-bienvenida">Bienvenida a tu espacio personal</p>
 
