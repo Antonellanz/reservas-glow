@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DataTable from 'react-data-table-component';
+import { API_URL } from './config';
 import './HistorialReservas.css';  
 
 const HistorialReservas = () => {
@@ -13,7 +14,7 @@ const HistorialReservas = () => {
   useEffect(() => {
     const obtenerReservas = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/reservas/mis-reservas', {
+        const response = await axios.get(`${API_URL}/api/reservas/mis-reservas`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setReservas(response.data);
@@ -35,7 +36,7 @@ const HistorialReservas = () => {
     if (!reservaSeleccionada) return;
 
     try {
-      await axios.delete(`http://localhost:8080/api/auth/reservas/${reservaSeleccionada.id}`, {
+      await axios.delete(`${API_URL}/api/auth/reservas/${reservaSeleccionada.id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setReservas(reservas.filter((r) => r.id !== reservaSeleccionada.id));

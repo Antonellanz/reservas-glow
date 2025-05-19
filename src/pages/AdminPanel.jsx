@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URL } from './config';
 import './AdminPanel.css';
 
 const AdminPanel = () => {
@@ -10,7 +11,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchReservas = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/admin/reservas', {
+        const response = await axios.get(`${API_URL}/api/admin/reservas`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setReservas(response.data);
@@ -29,7 +30,7 @@ const AdminPanel = () => {
     if (!confirmar) return;
 
     try {
-      await axios.delete(`http://localhost:8080/api/admin/reservas/${id}`, {
+      await axios.delete(`${API_URL}/api/admin/reservas/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setReservas((prev) => prev.filter((reserva) => reserva.id !== id));

@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../context/UserContext';
 import HistorialReservas from '../components/HistorialReservas';
+import { API_URL } from './config';
 import './Perfil.css';
 
 const Perfil = () => {
@@ -22,7 +23,7 @@ console.log("TOKEN:", token);
    
     const obtenerUsuario = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/auth/usuario/${email}`, {
+        const response = await axios.get(`${API_URL}/api/auth/usuario/${email}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -37,7 +38,7 @@ console.log("TOKEN:", token);
 
     const obtenerReservas = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/auth/reservas/usuario/${email}`, {
+        const response = await axios.get(`${API_URL}/api/auth/reservas/usuario/${email}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setReservas(response.data.name);
@@ -57,7 +58,7 @@ console.log("TOKEN:", token);
 
   const cancelarReserva = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/auth/reservas/${id}`, {
+      await axios.delete(`${API_URL}/api/auth/reservas/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setReservas(reservas.filter((r) => r.id !== id));

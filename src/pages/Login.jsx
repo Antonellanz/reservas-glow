@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useState , useContext, useEffect } from "react";
 import axios from "axios";
 import { UserContext } from "../context/UserContext";
-import "./AuthForm.css" 
+import { API_URL } from './config';
+import "./AuthForm.css";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -28,7 +29,7 @@ useEffect(() => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/api/auth/login", form);
+      const response = await axios.post(`${API_URL}/api/auth/login`, form);
 
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("name", response.data.name);

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { API_URL } from './config';
 import './Reservas.css';
 
 const Reservas = () => {
@@ -28,7 +29,7 @@ const Reservas = () => {
     }
 
     try {
-      await axios.post('http://localhost:8080/api/reservas', {
+      await axios.post(`${API_URL}/api/reservas`, {
         fecha: fecha.toISOString().split('T')[0],
         hora: hora + ":00",
         categoria: categoria
