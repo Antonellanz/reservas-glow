@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../context/UserContext';
 import HistorialReservas from '../components/HistorialReservas';
-import { API_URL } from './config';
+import { API_URL } from '../config';
 import './Perfil.css';
 
 const Perfil = () => {

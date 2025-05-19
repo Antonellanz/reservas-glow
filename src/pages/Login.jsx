@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState , useContext, useEffect } from "react";
 import axios from "axios";
 import { UserContext } from "../context/UserContext";
-import { API_URL } from './config';
+import { API_URL } from '../config';
 import "./AuthForm.css";
 
 export default function Login() {

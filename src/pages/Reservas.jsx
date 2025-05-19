@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { API_URL } from './config';
+import { API_URL } from '../config';
 import './Reservas.css';
 
 const Reservas = () => {
